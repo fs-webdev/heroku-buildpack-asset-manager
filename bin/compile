@@ -6,5 +6,8 @@ indent() {
 
 cd $1
 
+# need node on the path
+PATH=$PATH:$1/vendor/node/bin
+
 echo "----------> Deploying assets"
 ./node_modules/frontier-build-tools/node_modules/.bin/cake assets:deploy | indent
