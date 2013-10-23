@@ -6,5 +6,5 @@ indent() {
 
 cd $1
 
-status "Deploying assets"
-./node_modules/frontier-build-tools/node_modules/.bin/cake assets:deploy
+echo "----------> Deploying assets"
+./node_modules/frontier-build-tools/node_modules/.bin/cake assets:deploy | indent
